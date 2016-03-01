@@ -49,7 +49,7 @@ public class AssertionConsumerService extends HttpServlet {
 
             if (status != null) {
                 html += "<br/>status.getStatusCode() : " + status.getStatusCode().getValue();
-                html += "<br/>status.getStatusMessage() : " + status.getStatusMessage().getMessage();
+                //html += "<br/>status.getStatusMessage() : " + status.getStatusMessage().getMessage();
                 html += "<br/>status.getStatusDetail() : " + status.getStatusDetail();
             }
 
