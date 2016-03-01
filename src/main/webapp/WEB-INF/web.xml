@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>songgane-saml2</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>SPController</servlet-name>
+		<servlet-class>songgane.saml2.sp.SPController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AuthnRequestController</servlet-name>
+		<servlet-class>songgane.saml2.sp.AuthnRequestController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AssertionConsumerService</servlet-name>
+		<servlet-class>songgane.saml2.sp.AssertionConsumerService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>IDPController</servlet-name>
+		<servlet-class>songgane.saml2.idp.IDPController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SPController</servlet-name>
+		<url-pattern>/sp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AuthnRequestController</servlet-name>
+		<url-pattern>/sp/AuthnRequest</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AssertionConsumerService</servlet-name>
+		<url-pattern>/sp/AssertionConsumerService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IDPController</servlet-name>
+		<url-pattern>/idp/*</url-pattern>
+	</servlet-mapping>
+</web-app>
